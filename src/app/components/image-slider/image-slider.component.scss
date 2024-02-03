@@ -1,0 +1,74 @@
+:host{    
+    width: 100%;
+
+    .slider{
+        display: flex;
+        justify-items: center;
+        margin: auto;
+        width: 95%;
+        height: 540px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;        
+
+        .slide{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative; 
+        }
+
+        .rightArrow {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 32px;
+            font-size: 45px;
+            color: #fff;
+            z-index: 1;
+            cursor: pointer;
+        }
+          
+        .leftArrow {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 32px;
+            font-size: 45px;
+            color: #fff;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .indicatorsContainer{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            bottom: 20px;
+            width: 250px;
+
+            .indicators{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: transparent;
+                border: 2px solid white;
+                display: inline-block;
+                margin: 0px 5px;
+                cursor: pointer;
+                transition: background-color 700ms ease-in-out;
+
+                &.active {
+                    background-color: white;
+                }
+            }
+
+        }
+
+    }
+    
+}
+

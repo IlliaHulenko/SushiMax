@@ -1,0 +1,24 @@
+<div class="slider">
+    <div>
+        <div class="leftArrow" (click)="goToPrevious()">❰</div>
+        <div class="rightArrow" (click)="goToNext()">❱</div>
+    </div>
+
+    <div 
+        class="slide" 
+        [ngStyle]="{'background-image': getCurrentSlideUrl()}"               
+    ></div>
+    
+    <div class="indicatorsContainer">
+        @for(slide of slides; track slide.id){
+            <div 
+                class="indicators"
+                [ngClass]="{active: slide.id === currentIndex}"
+                (click)="jumpToSlide(slide.id)"
+            ></div>
+        }
+    </div>
+
+        
+    
+</div>
